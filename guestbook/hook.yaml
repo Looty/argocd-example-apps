@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: integration-test-
+  # name: aaa
   annotations:
     argocd.argoproj.io/hook: PostSync
 spec:
@@ -9,7 +10,7 @@ spec:
     spec:
       containers:
         - name: pi
-          image: perl:5.34.0
-          command: ["perl", "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+          image: busybox
+          command: ["wget", "guestbook-ui:80"]
       restartPolicy: Never
   backoffLimit: 4
