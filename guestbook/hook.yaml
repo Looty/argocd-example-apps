@@ -10,6 +10,6 @@ spec:
       containers:
         - name: pi
           image: busybox
-          command: ["wget", "guestbook-ui:81"]
+          command: ["wget", "guestbook-ui:80"]
       restartPolicy: Never
   backoffLimit: 4
