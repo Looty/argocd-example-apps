@@ -2,7 +2,6 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: integration-test-
-  # name: aaa
   annotations:
     argocd.argoproj.io/hook: PostSync
 spec:
@@ -11,6 +10,6 @@ spec:
       containers:
         - name: pi
           image: busybox
-          command: ["wget", "guestbook-ui:80"]
+          command: ["wget", "guestbook-ui:81"]
       restartPolicy: Never
   backoffLimit: 4
