@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: {{ template "helm-guestbookv2.fullname" . }}
 data:
-  my-property: my-value
+  NAME: kida
