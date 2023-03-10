@@ -26,7 +26,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
           - configMapRef:
-              name: {{ template "helm-guestbookv2.fullname" . }}-cm
+              name: {{ template "helm-guestbookv2.fullname" . }}
           # env:
           # - name: SPECIAL_LEVEL_KEY
           #   valueFrom:
