@@ -24,6 +24,12 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: SPECIAL_LEVEL_KEY
+            valueFrom:
+              configMapKeyRef:
+                name: {{ template "helm-guestbookv2.fullname" . }}
+                key: special.how
           envFrom:
           - configMapRef:
               name: {{ template "helm-guestbookv2.fullname" . }}
