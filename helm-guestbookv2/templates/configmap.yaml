@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: {{ template "helm-guestbookv2.fullname" . }}
 data:
-  SPECIAL_HOW: very
-  SPECIAL_TYPE: charm
+  special_how: very
+  special_type: charm
