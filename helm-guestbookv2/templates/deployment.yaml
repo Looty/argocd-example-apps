@@ -26,7 +26,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
           - configMapRef:
-              name: {{ .Release.Name }}
+              name: {{ template "helm-guestbookv2.fullname" . }}
           ports:
             - name: http
               containerPort: 80
