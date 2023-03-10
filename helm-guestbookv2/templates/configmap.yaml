@@ -5,3 +5,4 @@ metadata:
 data:
   CONFIG_HOW: very
   CONFIG_TYPE2: charm
+  CONFIG_NAME: charlie
