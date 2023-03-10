@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "helm-guestbookv2.fullname" . }}
+  name: {{ template "helm-guestbookv2.fullname" . }}-cm
 data:
   special.how: very
   special.type: charm
